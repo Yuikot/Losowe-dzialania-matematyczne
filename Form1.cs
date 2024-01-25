@@ -20,7 +20,6 @@ namespace Losowe_działania_matematyczne
         private void Form1_Load(object sender, EventArgs e)
         {
             CreateCalculation();
-            //DisplayCalculation();
         }
 
         private void TextBox1_KeyPress(object sender, KeyPressEventArgs e)
@@ -48,7 +47,6 @@ namespace Losowe_działania_matematyczne
         { 
             num1 = GenerateRandomNumber();
             num2 = GenerateRandomNumber();
-            //int result;
             int CreateCalc = GenerateCalculation();
 
             switch (CreateCalc)
@@ -78,18 +76,12 @@ namespace Losowe_działania_matematyczne
 
         }
 
-        private void DisplayCalculation()
-        {
-            //label1.Text = num1 + " x " + num2 + " =";
-        }
-
         private void CheckAnswer()
         {
             answer = textBox1.Text;
             if (answer == result.ToString())
             {
                 CreateCalculation();
-               // DisplayCalculation();
                 textBox1.Text = "";
                 textBox1.ForeColor = Color.Black;
             }
