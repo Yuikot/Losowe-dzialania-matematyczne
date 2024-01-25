@@ -15,6 +15,7 @@ namespace Losowe_działania_matematyczne
         {
             InitializeComponent();
             textBox1.KeyPress += new KeyPressEventHandler(TextBox1_KeyPress);
+            textBox1.TextChanged += textBox1_TextChanged;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -75,6 +76,11 @@ namespace Losowe_działania_matematyczne
             }
 
         }
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(textBox1.Text))
+                textBox1.ForeColor = Color.Black; 
+        }
 
         private void CheckAnswer()
         {
@@ -86,9 +92,7 @@ namespace Losowe_działania_matematyczne
                 textBox1.ForeColor = Color.Black;
             }
             else
-            {
                 textBox1.ForeColor = Color.Red;               
-            }
         }
     }
     
